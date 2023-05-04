@@ -7,17 +7,24 @@
     <link
         rel="stylesheet"
         href="style.css">
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Лабораторная №2</title>
+
+<style>body {background-color: #ffccee}</style>
+
 </head>
+
 <body>
-    <!-- Slider main container -->
+
 <div class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
+
         <!-- Slides -->
         <div class="swiper-slide">
             <img src="img/nastalgia.jpg" alt="some nastalgia" title="Nastalgia">
@@ -28,19 +35,55 @@
         <div class="swiper-slide">
             <img src="img/Blonde.jpg" alt="some blonde" title="Blonde">
         </div>
-        ...
+
     </div>
-    <!-- If we need pagination -->
+    <!-- pagination -->
     <div class="swiper-pagination"></div>
     
-    <!-- If we need navigation buttons -->
+    <!-- navigation buttons -->
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
     
-    <!-- If we need scrollbar -->
+    <!-- scrollbar -->
     <div class="swiper-scrollbar"></div>
     </div>    
 
-    <script src="script.js"></script>
+    
+
+
+
+<div style="padding-top:50px">
+
+    <label for="type-deposits" style="font-size:25pt;">Выберите тип вклада:</label>
+<select name="deposits" id="type-deposits" onchange="Update_Combobox_2()" style="font-size:25pt;">
+    <option value="0" disabled selected>-Тип вклада-</option>
+    <option value="1">Пополняемый</option>
+    <option value="2">Срочный</option>
+</select>
+
+</div>
+
+
+<div br style="padding-top:25px">
+
+   <label for="date" style="font-size:25pt;">Выберите срок вклада:</label>
+<select name="Date" id="date" style="font-size:25pt;">
+    <option value="0" disabled selected>-Срок вклада-</option>
+
+</select> 
+
+</div>
+<p><input type="text" name="InAss" placeholder="Введите сумму" size="18" style="font-size:25pt;"/></p>
+
+<button class="favorite styled" type="button" id = "submit" onclick="Sum();">Расcчитать! </button> 
+
+
+<div class="sum" style="font-size:25pt; padding-top:25px;"></div>
+
+
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
